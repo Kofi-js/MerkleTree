@@ -1,7 +1,7 @@
 import { MerkleTree } from 'merkletreejs';
 import keccak256 from 'keccak256';
 
-// Define your addresses
+//list of 5  addresses
 const addresses = ['addr1', 'addr2', 'addr3', 'addr4', 'addr5'];
 
 // Convert each address to a buffer using keccak256 hash
