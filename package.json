@@ -1,0 +1,19 @@
+{
+  "name": "merkle",
+  "version": "1.0.0",
+  "main": "merkle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon merkle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.4.1",
+    "nodemon": "^3.1.9"
+  }
+}
