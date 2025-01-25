@@ -1,8 +1,7 @@
 import { MerkleTree } from 'merkletreejs';
 import keccak256 from 'keccak256';
 
-//list of 5  addresses
-
+// The 5 addresses
 const addresses = [
     '0x1234567890123456789012345678901234567890',
     '0x2345678901234567890123456789012345678901',
@@ -11,17 +10,17 @@ const addresses = [
     '0x5678901234567890123456789012345678901234'
 ];
 
-// Convert each address to a buffer using keccak256 hash
+// let's hash each address with keccak256 and turning them into buffers.
 const leaves = addresses.map(x => keccak256(x));
 
-// Create the Merkle Tree
+// Now let's create the Merkle Tree
 const tree = new MerkleTree(leaves, keccak256, { sortPairs: true });
 
-// Get the Merkle Root
+// To get the Root
 const root = tree.getHexRoot();
 console.log('Merkle Root:', root);
 
-// Get proof for the first address
+// Proof for the first address
 const leaf = keccak256('0x1234567890123456789012345678901234567890');
 const proof = tree.getHexProof(leaf);
 
